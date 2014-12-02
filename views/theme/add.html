@@ -1,0 +1,23 @@
+
+{{extend 'layout.html'}}
+
+<h2>Create a new theme</h2>
+<form enctype="multipart/form-data"
+      action="{{=URL('save')}}" method="post">
+      Theme:
+      <input id="name" name="name" />
+      Released Year:
+      <select id="year", name="year"></select>
+
+      <input type="submit" />
+      </form>
+
+<script>
+var start = 1900;
+var end = new Date().getFullYear();
+var options = "";
+for(var year = end; year >=start; year--){
+	options += "<option>"+ year +"</option>";
+	}
+document.getElementById("year").innerHTML = options;
+</script>

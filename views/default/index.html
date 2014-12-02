@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+
+
+<div class="column-holder">
+<div class="primary">
+
+<div class="action-box rounded">
+    <div class="titlebar">
+            <h2 id="pa">Themes and Tags</h2>
+            <h3>Add, update, delete themes and tags</h3>
+   </div>
+	<div class="listbar">
+		<div class="listbox">
+		    <h4>Themes</h4><ul>
+		    <li><a href="{{=URL('theme', 'add')}}">Add a new theme</a></li>
+		    <li><a href="{{=URL('packaging', 'add')}}">Add a new packaging choice</a></li>
+		    <li><a href="{{=URL('set', 'add')}}">Add a new LEGO set</a></li>
+		    </ul></div>
+		<div class="listbox">
+		    <h4>Tags</h4><ul>
+		    <li>1</li>
+		    <li>2</li>
+		    </ul></div>
+	</div>
+</div>		 
+</div>
+</div>
