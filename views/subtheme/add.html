@@ -1,13 +1,18 @@
 {{extend 'layout.html'}}
 
-
 <form enctype="multipart/form-data"
       action="{{=URL('save')}}" method="post">
-      Theme:
+      Sub-Theme:
       <input id="name" name="name" />
+      Theme:
+      <select id="theme", name="theme">
+      {{ for t in themes:}}
+      	<option> {{=t.name}} </option>
+      {{pass}}
+      </select>
       Released Year:
       <select id="year", name="year"></select>
-
+      
       <input type="submit" />
       </form>
 
@@ -23,4 +28,6 @@ for(var year = end; year >=start; year--){
 	}
 	}
 document.getElementById("year").innerHTML = options;
+
+	
 </script>
