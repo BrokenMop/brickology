@@ -1,4 +1,9 @@
 
+def list():
+	response.files.append(URL('static', 'css/basic.css'))
+	themes = get_all_themes()
+	return dict(themes = themes)
+
 def add():
 	
 	return dict()

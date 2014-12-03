@@ -87,15 +87,6 @@ def add_new_theme(name, year):
 	else:
 		return False
 
-def add_new_sub_theme(theme, name, year):
-	theme_id = db(db.lego_theme.name == theme).select().first()
-	count = db((name == db.lego_sub_theme.name) & (theme_id == db.lego_sub_theme.name)).count()
-	if count == 0:
-		db.lego_sub_theme.insert(name=name, theme=theme_id, released_year=year)
-		return True
-	else:
-		return False
-
 def add_new_packaging(name):
 	count = db(name == db.packaging.name).count()
 	if count == 0:
@@ -104,10 +95,7 @@ def add_new_packaging(name):
 	else:
 		return False
 
-
-
 def get_all_themes():
-	themes = db(db.lego_theme.id > 0).select(orderby=db.lego_theme.name)
-	return themes
-
-
+	query = db.lego_theme.id > 0
+	rows = db(query).select(orderby = db.lego_theme.name)
+	return rows

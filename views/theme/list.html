@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+
+<table id = "strip">
+<tr><th>Theme</th> 
+    <th>Sets</th>
+    <th>Sub-Themes</th>
+    <th>Released Year</th>
+    </tr>
+
+{{ for t in themes:}}
+    <tr><td>{{=t.name}}</td> 
+    <td>tbd</td>
+    <td>tbd</td>
+    <td>{{=t.released_year}}</td>
+    </tr>
+{{pass}}
+
+</table>

@@ -1,0 +1,33 @@
+#strip
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+
+
+#strip tr:nth-child(even) {
+   background-color: #eeeeee;
+   border: 2px solid black;
+   padding:3px 7px 2px 7px;
+   font-size:1.2em;
+}
+
+
+#strip tr:nth-child(odd) {
+   background-color: #fff;
+   border: 2px solid black;
+   padding:3px 7px 2px 7px;
+   font-size:1.2em;
+}
+
+#strip th 
+{
+font-size:1.3em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#666666;
+color:#fff;
+}
+
